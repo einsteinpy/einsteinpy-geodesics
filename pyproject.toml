@@ -1,0 +1,25 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+dist-name = "einsteinpy-geodesics"
+module = "einsteinpy_geodesics"
+author = "Shreyas Bapat"
+author-email = "bapat.shreyas@gmail.com"
+home-page = "https://github.com/einsteinpy/einsteinpy-geodesics"
+requires-python = ">=3.7"
+requires = []
+
+[tool.flit.metadata.requires-extra]
+dev = [
+    "hypothesis",
+    "pytest",
+    "pytest-cov",
+    "pytest-mypy",
+]
+doc = [
+    "sphinx",
+    "sphinx-hoverxref",
+    "sphinx_rtd_theme",
+]

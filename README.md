@@ -1,3 +1,5 @@
-# Einsteinpy-Geodesics
+# einsteinpy-geodesics
 
-Python wrapper for a Julia solver for geodesics in the Kerr family of spacetimes
+[TBC]
+
+einsteinpy-geodesics requires Python >= 3.7.
