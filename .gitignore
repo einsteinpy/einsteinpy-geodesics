@@ -1,0 +1,16 @@
+# Compiled files
+*.py[cod]
+*.a
+*.o
+*.so
+__pycache__
+
+# Virtual Environment
+venv/
+
+# Packages/installer info
+*.egg
+*.egg-info
+
+# VS Code
+.vscode
