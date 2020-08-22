@@ -18,7 +18,7 @@ Main.include("src/einsteinpy_geodesics/KerrSolver.jl")
 
 def SolveSystem(q, p, params, end_lambda, step_size):
     """
-    Wrapper to `KerrSolver.solveSystem`
+    Wrapper to `KerrSolver.solveSystem`, from the Julia code
 
     Parameters
     ----------
@@ -29,7 +29,7 @@ def SolveSystem(q, p, params, end_lambda, step_size):
     params : array_like
         Length-4 Array, containing - 
         Black Hole Spin Parameter, `a`,
-        Test Particle Energy, `E`
+        Test Particle Energy, `E`,
         Test Particle Mass, `mu`,
         Norm of tangent vector (4-Velocity/4-Momentum), `fac`
     end_lambda : float
