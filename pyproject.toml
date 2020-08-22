@@ -9,7 +9,7 @@ author = "Shreyas Bapat"
 author-email = "bapat.shreyas@gmail.com"
 home-page = "https://github.com/einsteinpy/einsteinpy-geodesics"
 requires-python = ">=3.7"
-requires = []
+requires = ["julia"]
 
 [tool.flit.metadata.requires-extra]
 dev = [

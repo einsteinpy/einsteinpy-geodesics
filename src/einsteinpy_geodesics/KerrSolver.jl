@@ -15,7 +15,7 @@ This function defines the general Hamiltonian for Kerr Spacetime (rotating, unch
                                 Black Hole Spin Parameter, `a`,
                                 Test Particle Energy, `E`
                                 Test Particle Mass, `mu`,
-                                a geodesic-type dependent value, `fac`, (See `einsteinpy.geodesic`)
+                                Norm of tangent vector (4-Velocity/4-Momentum), `fac`
 
 # Output
 - `Float64`: Functional evaluation of the Hamiltonian, for use with `solveSystem()`
@@ -28,14 +28,12 @@ function KerrHamiltonian(q, p, params)
     mu = params[4]
 
     return ((a^4 * (-E^2 - 2 * fac + mu^2 + 2 * p[1]^2) + 8 * a * E * p[3] * q[1] + 
-        a^2 * (-2 * p[3]^2 + 2 * p[2]^2 - 
-        2 * (E^2 - 2 * fac + mu^2 + 4 * p[1]^2) * q[1] + (-3 * E^2 - 6 * fac + 
-        3 * mu^2 + 4 * p[1]^2) * q[1]^2) + 
-        2 * q[1] * (p[2]^2 * (-2 + q[1]) + 
-        q[1] * (p[1]^2 * (-2 + q[1])^2 + 
-        q[1] * (-2 * fac * (-2 + q[1]) + mu^2 * (-2 + q[1]) - E^2 * q[1]))) + (a^2 + (-2 +
-        q[1]) * q[1]) * (a^2 * (-E^2 - 2 * fac + mu^2) * cos(2 * q[2]) + 
-        2 * p[3]^2 * csc(q[2])^2))/(4 * (a^2 + (-2 + q[1]) * q[1]) * (q[1]^2 + a^2 * cos(q[2])^2)))   
+        a^2 * (-2 * p[3]^2 + 2 * p[2]^2 - 2 * (E^2 - 2 * fac + mu^2 + 4 * p[1]^2) * 
+        q[1] + (-3 * E^2 - 6 * fac + 3 * mu^2 + 4 * p[1]^2) * q[1]^2) + 2 * q[1] * 
+        (p[2]^2 * (-2 + q[1]) + q[1] * (p[1]^2 * (-2 + q[1])^2 + q[1] * (-2 * fac * 
+        (-2 + q[1]) + mu^2 * (-2 + q[1]) - E^2 * q[1]))) + (a^2 + (-2 + q[1]) * q[1]) * 
+        (a^2 * (-E^2 - 2 * fac + mu^2) * cos(2 * q[2]) + 2 * p[3]^2 * csc(q[2])^2)) / 
+        (4 * (a^2 + (-2 + q[1]) * q[1]) * (q[1]^2 + a^2 * cos(q[2])^2)))
 end
 
 """
@@ -52,7 +50,7 @@ to integrate the system.
                                 Black Hole Spin Parameter, `a`,
                                 Test Particle Energy, `E`
                                 Test Particle Mass, `mu`,
-                                a geodesic-type dependent value, `fac`, (See `einsteinpy.geodesic`)
+                                Norm of tangent vector (4-Velocity/4-Momentum), `fac`
 - `end_lambda::Float64`: Affine Parameter value, where integration will end
 - `step_size::Float64`: Step Size (Fixed)
 
@@ -76,8 +74,8 @@ function solveSystem(q0, p0, params, end_lambda, step_size)
     cb = ContinuousCallback(reached_event_horizon, terminate!)
 
     sol = solve(prob, VerletLeapfrog(), dt = step_size, callback=cb)
-    
-    # sol.u is of type, ArrayPartition
+
+    # sol.u is of type, "ArrayPartition"
     # These operations are necessary for convenient numpy usage
     solu_flat = Array(transpose(reshape(collect(Iterators.flatten(sol.u)), (6, :))))
 
