@@ -29,7 +29,7 @@
 
 :Name: EinsteinPy Geodesics
 :Website: https://docs.geodesics.einsteinpy.org/en/latest/
-:Version: 0.1.dev0
+:Version: 0.2.dev0
 
 |mailing| |gitter| |riotchat| |license| |docs|
 
