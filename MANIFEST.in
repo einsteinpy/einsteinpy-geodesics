@@ -1,0 +1,9 @@
+graft docs
+graft src/einsteinpy_geodesics/julia_backend
+
+include COPYING
+include AUTHORS
+
+recursive-include tests *.py *.html
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib
