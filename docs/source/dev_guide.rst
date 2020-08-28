@@ -1,17 +1,17 @@
 Developer Guide
 ===============
 
-Einsteinpy is a community project, hence all contributions are more than
+EinsteinPy is a community project. Hence, all contributions are more than
 welcome!
 
-Bug reporting
--------------
+Reporting Bugs
+--------------
 
 Not only things break all the time, but also different people have different
 use cases for the project. If you find anything that doesn't work as expected
 or have suggestions, please refer to the `issue tracker`_ on GitHub.
 
-.. _`issue tracker`: https://github.com/einsteinpy/einsteinpy/issues
+.. _`issue tracker`: https://github.com/einsteinpy/einsteinpy-geodesics/issues
 
 Documentation
 -------------
@@ -54,7 +54,7 @@ help us fixing bugs in einsteinpy and check out the `"easy" tag`_. Those
 should be easier to fix than the others and require less knowledge about the
 library.
 
-.. _`"easy" tag`: https://github.com/einsteinpy/einsteinpy/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy
+.. _`"easy" tag`: https://github.com/einsteinpy/einsteinpy-geodesics/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy
 
 If you are hesitant on what IDE or editor to use, just choose one that
 you find comfortable and stick to it while you are learning. People have
@@ -90,7 +90,7 @@ to read other good examples on how to do it. The purpose is to describe
 without too much code what you are trying to accomplish to justify the
 effort and to make it understandable to a broader audience.
 
-.. _`wiki`: https://github.com/einsteinpy/einsteinpy/wiki
+.. _`wiki`: https://github.com/einsteinpy/einsteinpy-geodesics/wiki
 
 All new features should be thoroughly tested, and in the ideal case the
 coverage rate should increase or stay the same. Automatic services will ensure

@@ -1,5 +1,5 @@
-EinsteinPy - Making Einstein possible in Python
-===============================================
+EinsteinPy Geodesics
+====================
 
 Contents
 --------

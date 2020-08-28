@@ -6,19 +6,15 @@ project = "EinsteinPy Geodesics"
 year = datetime.now().year
 copyright = "%d EinsteinPy Development Team" % year
 
-version = "0.4"
-release = "0.4.dev0"
+version = "0.1"
+release = "0.1.dev0"
 highlight_language = "python"
 pygments_style = "sphinx"
 autoclass_content = "both"
 
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3", None),
-    "astropy": ("http://docs.astropy.org/en/stable/", None),
     "numpy": ("https://docs.scipy.org/doc/numpy/", None),
-    "scipy": ("https://docs.scipy.org/doc/scipy/reference", None),
-    "matplotlib": ("https://matplotlib.org", None),
-    "sympy": ("https://docs.sympy.org/latest", None),
 }
 
 
@@ -31,8 +27,8 @@ html_theme_options = {
     "logo": "logo_small.png",
     "logo_name": True,
     "logo_text_align": "center",
-    "codecov_button": True,
-    "description": "General Relativity in Python",
+    "codecov_button": False,
+    "description": "Geodesics in Kerr Spacetime",  # This will evolve
     "body_text_align": "left",
     "github_user": "einsteinpy",
     "github_repo": "einsteinpy-geodesics",
@@ -42,7 +38,7 @@ html_theme_options = {
     "github_banner": True,
     "donate_url": "https://opencollective.com/einsteinpy",
     "github_button": True,
-    "extra_nav_links": {"Blog": "https://docs.einsteinpy.org/"},
+    "extra_nav_links": {"Blog": "https://blog.einsteinpy.org/"},
 }
 
 add_function_parentheses = True

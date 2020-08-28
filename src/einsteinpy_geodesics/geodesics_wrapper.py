@@ -1,38 +1,3 @@
-"""
-Wrapper to Julia code, in ``run.jl`` and ``KerSolver.jl``
-
-This backend produces stable output. It is highly recommended to
-use this backend by setting `julia=True`, in the constructor call to
-``einsteinpy.geodesic.*``.
-
-Parameters
-----------
-q : array_like
-    Length-3 Array, containing the initial 3-Position
-p : array_like
-    Length-3 Array, containing the initial Covariant 3-Momentum
-params : array_like
-    Length-3 Array, containing Black Hole Spin Parameter, `a`, Test Particle Energy, `E` and
-    Test Particle Rest Mass, `mu`
-end_lambda : float
-    Affine Parameter value, where integration will end
-step_size : float
-    Step Size (Fixed)
-
-Returns
--------
-lambdas : numpy.ndarray
-    Array, containing affine parameter values, where integration was performed
-vecs : numpy.ndarray
-    2D Array, containing integrated 3-Positions and Covariant 3-Momenta
-
-Raises
-------
-OSError
-    If ``julia`` is not found on system path
-
-"""
-
 import subprocess as sb
 import warnings
 
