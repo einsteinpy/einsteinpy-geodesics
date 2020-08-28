@@ -49,8 +49,6 @@ add_function_parentheses = True
 
 add_module_names = True
 
-autodoc_mock_imports = ["julia"]
-
 needs_sphinx = "1.3"
 extensions = [
     "alabaster",
@@ -59,8 +57,6 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.mathjax",
     "sphinx.ext.intersphinx",
-    "nbsphinx",
-    "IPython.sphinxext.ipython_console_highlighting",
     "sphinx.ext.mathjax",  # New module for matrix visualization
     "sphinx.ext.graphviz",  # For creating the diagrams
     "sphinx.ext.viewcode",  # View Source button
