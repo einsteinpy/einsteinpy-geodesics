@@ -74,7 +74,7 @@ and `ODEInterfaceDiffEq.jl`. You can add them, like so::
 Finally, `einsteinpy_geodesics` can be installed in the most intuitive way::
 
 
-   $ pip install einsteinpy_geodesics
+   $ pip install einsteinpy-geodesics
 
 
 For using this package, we strongly recommend you to use EinsteinPy Core package along with it.
