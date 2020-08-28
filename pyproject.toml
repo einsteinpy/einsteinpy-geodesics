@@ -1,24 +1,67 @@
 [build-system]
-requires = ["flit_core >=2,<4", "numpy"]
+requires = [
+    "flit_core >=2,<4",
+    "wheel",
+    "oldest-supported-numpy",
+]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-dist-name = "einsteinpy-geodesics"
 module = "einsteinpy_geodesics"
 author = "Shreyas Bapat"
 author-email = "bapat.shreyas@gmail.com"
+description-file = "README.rst"
 home-page = "https://github.com/einsteinpy/einsteinpy-geodesics"
-requires-python = ">=3.7"
+keywords = "aero,aerospace,engineering,astrodynamics,orbits,kepler,orbital mechanics"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+requires-python = ">=3.7,<3.9"
+requires = [
+    "numpy",
+]
 
 [tool.flit.metadata.requires-extra]
+jupyter = ["notebook"]
+cesium = ["czml3 ~=0.5.3"]
 dev = [
+    "black",
+    "coverage",
     "hypothesis",
-    "pytest",
-    "pytest-cov",
+    "isort",
+    "mypy>=0.740",
+    "pycodestyle",
+    "pytest>=3.2",
+    "pytest-cov<2.6.0",  # https://github.com/pytest-dev/pytest-cov/issues/222
+    "pytest-doctestplus",
+    "pytest-mpl",
     "pytest-mypy",
-]
-doc = [
+    "pytest-remotedata",
     "sphinx",
-    "sphinx-hoverxref",
-    "sphinx_rtd_theme",
+    "alabaster",
+    "tox",
+]
+
+[tool.flit.metadata.urls]
+Source = "https://github.com/einsteinpy/einsteinpy-geodesics"
+Tracker = "https://github.com/einsteinpy/einsteinpy-geodesics/issues"
+
+[tool.flit.sdist]
+include = [
+    "setup.cfg"
+]
+exclude = [
+    "docs/"
 ]

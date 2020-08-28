@@ -33,10 +33,11 @@
 
 |mailing| |gitter| |riotchat| |license| |docs|
 
-`EinsteinPy <https://einsteinpy.org/>`_ is an open source pure Python package, dedicated to problems arising
-in General Relativity and Gravitational Physics. EinsteinPy Geodesics is an addon 
-package for EinsteinPy, that wraps over Julia's excellent `DifferentialEquations.jl <https://diffeq.sciml.ai/stable/>`_
+EinsteinPy Geodesics is an addon package for EinsteinPy, that wraps over Julia's 
+excellent `DifferentialEquations.jl <https://diffeq.sciml.ai/stable/>`_
 suite and provides a python interface to solve for geodesics in Kerr & Schwarzschild spacetime.
+`EinsteinPy <https://einsteinpy.org/>`_ is an open source pure Python package, dedicated to problems arising
+in General Relativity and Gravitational Physics. 
 As with EinsteinPy, EinsteinPy Geodesics is released under the MIT license.
 
 Documentation
@@ -51,10 +52,7 @@ Complete documentation for this module can be accessed at `<https://docs.geodesi
 Requirements
 ============
 
-EinsteinPy Geodesics requires `Python >= 3.7`, `Julia >= 1.5` and the following packages:
-
-* Python:
-   * `numpy >= 1.18`
+EinsteinPy Geodesics requires `Python >= 3.7`, `Julia >= 1.5` and the following Julia packages:
 
 * Julia
    * `DifferentialEquations.jl >= 6.15`
@@ -73,21 +71,13 @@ and `ODEInterfaceDiffEq.jl`. You can add them, like so::
    julia> Pkg.add("ODEInterfaceDiffEq")
 
 
-On the Python side, NumPy can be installed easily through `conda <http://conda.io>`_, by running::
+Finally, `einsteinpy_geodesics` can be installed in the most intuitive way::
 
-   $ conda install numpy
-
-Or, from `PyPI <https://pypi.org/>`_, by typing in::
-
-   $ pip install numpy
-
-Finally, `einsteinpy_geodesics` can be installed in the same way, as `numpy`::
-
-   $ conda install einsteinpy_geodesics
-
-Or::
 
    $ pip install einsteinpy_geodesics
+
+
+For using this package, we strongly recommend you to use EinsteinPy Core package along with it.
 
 Alternatively, you can install the package from source, by cloning `einsteinpy_geodesics <https://github.com/einsteinpy/einsteinpy-geodesics/>`_,
 and typing in the following, in a shell (in Linux/macOS)::
