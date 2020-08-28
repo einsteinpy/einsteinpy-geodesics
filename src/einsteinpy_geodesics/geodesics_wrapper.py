@@ -1,8 +1,9 @@
+import re
 import subprocess as sb
 import warnings
+from pathlib import Path
 
 import numpy as np
-import re
 
 from .utils import _project_root
 
@@ -73,8 +74,11 @@ def solveSystem(q, p, params, end_lambda, step_size):
     jl_out_list = re.findall(r"['\"](.*?)['\"]", str(jl_out.decode("unicode-escape")))
     retcode, out_path = jl_out_list
 
-    lambdas = np.loadtxt(out_path + "\\lambdas.csv", delimiter=",")
-    vecs = np.loadtxt(out_path + "\\vecs.csv", delimiter=",")
+    out_path_ld = Path(out_path) / "lambdas.csv"
+    out_path_v = Path(out_path) / "vecs.csv"
+
+    lambdas = np.loadtxt(out_path_ld, delimiter=",")
+    vecs = np.loadtxt(out_path_v, delimiter=",")
 
     if retcode == "Terminated":
         warnings.warn("Test particle has reached the Event Horizon. ", RuntimeWarning)

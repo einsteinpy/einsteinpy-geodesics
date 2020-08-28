@@ -88,7 +88,6 @@ Or, on Windows::
 
    $ flit install --pth-file /path/to/einsteinpy_geodesics/
 
-
 Problems
 ========
 
@@ -96,6 +95,10 @@ If the installation fails or you find something, that doesn't work as expected,
 please open an issue in the `issue tracker`_.
 
 .. _`issue tracker`: https://github.com/einsteinpy/einsteinpy-geodesics/issues
+
+Note that, `DifferentialEquations.jl` requires `gfortran` to be present on the system. 
+If you encounter a `gfortran`-related error, while using this package, please install/update your `gfortran` installation.
+See `<https://gcc.gnu.org/wiki/GFortranBinaries>` for more details or open an issue in the issue tracker.
 
 Contributing
 ============

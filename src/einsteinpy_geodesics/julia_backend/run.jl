@@ -7,7 +7,7 @@ These are accessed by the `_julia_wrapper` utility function in EinsteinPy.
 # Stand-alone Usage Example
 ```
 > julia run.jl 10., 1.57, 0., 0., 0., 2.427, 0.99, 0.9, 0.5, 0.05
-("Success", "C:\\Users\\UserName\\AppData\\Local\\Temp\\epy_geod_jl")
+("Success", "C:\\Users\\UserName\\AppData\\Local\\Temp\\epy_geod_jl_temp")
 ```
 where the argument order is q1, q2, q3, p1, p2, p3, a, E, end_lambda, step_size.
 See "einsteinpy.geodesic.Geodesic" or "KerrSolver.jl" for information on the arguments.

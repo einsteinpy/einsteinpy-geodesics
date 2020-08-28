@@ -1,4 +1,7 @@
+import os
+import tempfile
 import warnings
+from pathlib import Path
 
 import numpy as np
 import pytest
@@ -29,6 +32,19 @@ def input_nulllike():
     step_size = 0.05
 
     return q, p, params, end_lambda, step_size
+
+
+def test_csvs_exist_after_julia_call(input_timelike):
+    q, p, params, end_lambda, step_size = input_timelike
+
+    lambdas, vecs = epyg.solveSystem(q, p, params, end_lambda, step_size)
+
+    out_path = Path(tempfile.gettempdir()) / "epy_geod_jl_temp"
+
+    list_of_files = os.listdir(out_path)
+
+    assert "lambdas.csv" in list_of_files
+    assert "vecs.csv" in list_of_files
 
 
 def test_return_types(input_timelike):
