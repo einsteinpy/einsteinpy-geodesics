@@ -23,13 +23,13 @@
    :target: https://github.com/einsteinpy/einsteinpy-geodesics/blob/master/COPYING
 
 .. |docs| image:: https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat-square
-   :target: https://docs.geodesics.einsteinpy.org/en/latest/
+   :target: https://docs.geodesics.einsteinpy.org/en/v0.1.0/
 
 
 
 :Name: EinsteinPy Geodesics
 :Website: https://docs.geodesics.einsteinpy.org/en/latest/
-:Version: 0.1.dev0
+:Version: 0.1.0
 
 |mailing| |gitter| |riotchat| |license| |docs|
 
