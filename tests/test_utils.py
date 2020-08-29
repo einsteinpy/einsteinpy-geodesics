@@ -1,11 +1,11 @@
 from pathlib import Path
 
-from einsteinpy_geodesics.utils import _project_root
+import einsteinpy_geodesics.utils as egu
 
 
 def test_project_root():
-    root = _project_root()
+    root = egu._project_root()
 
-    expected = Path.cwd() / "src"
+    expected = Path(egu.__file__).parent.parent
 
     assert root == expected
