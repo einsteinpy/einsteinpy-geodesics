@@ -97,3 +97,16 @@ def test_motion_constants_nulllike(input_nulllike):
     lambdas, vecs = epyg.solveSystem(q, p, params, end_lambda, step_size)
 
     assert_allclose(L, vecs[:, 5], atol=1e-3, rtol=1e-3)
+
+# A specific case, moved from EinsteinPy's tests
+def test_schwarzschild_precession():
+    q = [40., np.pi / 2, 0.]
+    p = [0., 0., 3.83405]
+    params = [0., 0.9791466126276669, -1.]
+    end_lambda = 2000.
+    step_size = 0.5
+
+    lambdas, vecs = epyg.solveSystem(q, p, params, end_lambda, step_size)
+
+    assert_allclose(vecs[:, 1], np.pi/2, atol=1e-12, rtol=1e-12)
+    assert_allclose(vecs[:, 4], 0, atol=1e-12, rtol=1e-12)

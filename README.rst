@@ -98,7 +98,7 @@ please open an issue in the `issue tracker`_.
 
 Note that, `DifferentialEquations.jl` requires `gfortran` to be present on the system. 
 If you encounter a `gfortran`-related error, while using this package, please install/update your `gfortran` installation.
-See `<https://gcc.gnu.org/wiki/GFortranBinaries>` for more details or open an issue in the issue tracker.
+See `<https://gcc.gnu.org/wiki/GFortranBinaries>`_ for more details or open an issue in the issue tracker.
 
 Contributing
 ============
@@ -109,6 +109,26 @@ contains the developer documentation.
 
 .. _`CONTRIBUTING.rst`: https://github.com/einsteinpy/einsteinpy-geodesics/blob/master/CONTRIBUTING.rst
 
+Some Plots
+==========
+
+Below, we present some of the geodesic plots, made using `einsteinpy` and `einsteinpy_geodesic`.
+
+.. image:: docs/source/_static/anim.gif
+   :alt: Kerr Constant Radius Orbit Animation
+   :align: center
+
+.. image:: docs/source/_static/drag.png
+   :alt: Kerr Null-like Frame Dragging
+   :width: 484px
+   :align: center
+
+.. image:: docs/source/_static/precess.png
+   :alt: Schwarzschild Precession
+   :width: 484px
+   :align: center
+
+----
 
 Support
 =======
